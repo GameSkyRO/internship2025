@@ -35,10 +35,43 @@ Further read on the clocks needed to allow the USART peripherals to work. This r
 Started the implementation of USART, without creating the additional resources. Attempted to create a working prototype over the USART provided by the debugger. Setup was unsuccesful.
 
 ## 16.07.2025
-Corrected the mistakes made in the previous day and succesfully implemented USART as a prototype. Next step is to implement encapsulate the methods used belonging to each peripheral (syscon and flexcomm).
+Corrected the mistakes made in the previous day and succesfully implemented USART as a prototype. Next step is to implement the methods used belonging to each peripheral (syscon and flexcomm).
 
 ## 17.07.2025
 Started working on clocks.rs, providing higher level methods for enabling USART. Implemented functions for all the FLEXCOMM interfaces, beyond the one needed for my prototype (FLEXCOMM0).
 
 ## 21.07.2025
 Cleaned up the code and generalized some of the traits for easier use.
+
+## 22.07.2025
+Tested the ability to send a message via USART. Attempted to write a loopback test without success.
+
+## 23.07.2025
+Further debugged the loopback capability. Not finished.
+
+## 24.07.2025
+Further debug.
+
+## 28.07.2025
+Successfuly tested sending characters in a blocking way, along with the loopback test.
+
+## 29.07.2025
+Started looking into the interrupt driven approach. Researched the needed interrupts to make the interrupt driven part work.
+
+## 30.07.2025
+Implemented part of the functions needed to modify the registers needed. Worked on handle_interrupt(). 
+
+## 31.07.2025
+Implemented the needed methods and managed to load part of the kernel startup.
+
+## 4.08.2025
+Worked on another loopback test to verify the newline (interrupt-driven) sending of messages.
+
+## 5.08.2025
+Fixed transmits not firing and tested interrupt-driven USART receival. Tested looping messages after newline.
+
+## 6.08.2025
+Managed to run the libtock-c "Hello world!" example without issue.
+
+## 7.08.2025
+Started research on the implementation steps of the alarm.
